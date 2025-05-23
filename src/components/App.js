@@ -1,12 +1,16 @@
+import React from 'react';
+import './App.css'
+import UserInfo from './components/UserInfo';
+import { Provider } from 'react-redux'
+import store from './store.js'
 
-import React from "react";
-import './../styles/App.css';
-
-const App = () => {
+function App() {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
+    <>
+      <Provider store={store}>
+        <UserInfo />
+      </Provider>
+    </>
   )
 }
 
